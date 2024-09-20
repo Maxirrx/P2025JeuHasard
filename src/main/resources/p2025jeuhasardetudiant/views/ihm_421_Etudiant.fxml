@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="conteneurPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="p2025jeuhasardetudiant.controllers.MainController">
+   <children>
+      <Label fx:id="lTitre" alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="17.0" prefWidth="603.0" text="Bienvenue dans votre jeu du 421" textFill="#b509eb">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <VBox fx:id="conteneurJeu1" prefHeight="108.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="lTitreJeu1" alignment="TOP_CENTER" prefHeight="21.0" prefWidth="599.0" text="Mode de jeu 1" textFill="#5611e1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <StackPane fx:id="spJeu1" prefHeight="35.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="bTousLesDes" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#bTousLesDesClick" prefHeight="25.0" prefWidth="178.0" text="Lancer tous les dès">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Button>
+               </children>
+            </StackPane>
+            <HBox fx:id="conteneurHorizontalJeu1" alignment="CENTER" prefHeight="41.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <Button fx:id="bDe1" mnemonicParsing="false" onAction="#bDe1Click" text="dé 1">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Button>
+                  <Button fx:id="bDe2" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#bDe2Click" text="dé 2" />
+                  <Button fx:id="bDe3" mnemonicParsing="false" onAction="#bDe3Click" text="dé 3">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <Separator fx:id="separatorJeu1" prefWidth="200.0" style="-fx-background-color: #b509eb;">
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </Separator>
+      <VBox prefHeight="56.0" prefWidth="600.0" spacing="20.0">
+         <children>
+            <Label fx:id="lTitreJeu2" alignment="TOP_CENTER" prefHeight="21.0" prefWidth="599.0" text="Mode de jeu 2" textFill="#5611e1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <StackPane fx:id="spJeu2" prefHeight="35.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="bLancerAuto1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#bLancerAuto1Click" prefHeight="25.0" prefWidth="181.0" text="Lancer tous les dès">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <StackPane.margin>
+                        <Insets />
+                     </StackPane.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </StackPane>
+            <Separator fx:id="separatorJeu11" prefWidth="200.0" style="-fx-background-color: #b509eb;">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Separator>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </VBox>
+      <VBox fx:id="conteneurJeu3" prefHeight="56.0" prefWidth="600.0" spacing="20.0">
+         <children>
+            <Label fx:id="lTitreJeu3" alignment="TOP_CENTER" contentDisplay="RIGHT" prefHeight="21.0" prefWidth="599.0" text="Mode de jeu 3" textFill="#5611e1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <StackPane fx:id="spJeu3" prefHeight="35.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="bModeAuto2" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#bLancerAuto2Click" prefHeight="48.0" prefWidth="178.0" text="Lancer tous les dès">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <StackPane.margin>
+                        <Insets />
+                     </StackPane.margin>
+                  </Button>
+               </children>
+            </StackPane>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </VBox>
+      <Separator fx:id="separatorJeu12" prefWidth="200.0" style="-fx-background-color: #b509eb;">
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </Separator>
+      <VBox fx:id="conteneurResultat" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <VBox fx:id="sousConteneurResultat" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="lTitreResultat" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="606.0" text="Résultat" textFill="#5611e1">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox fx:id="ConteneurDes" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="lDe1" text="6" textFill="#f50909">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="lDe2" text="6" textFill="#3513bf">
+                           <HBox.margin>
+                              <Insets left="130.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lDe3" text="6" textFill="#16da37">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="120.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="ConteneurNbTentative" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="lTitreJeu31" alignment="TOP_CENTER" contentDisplay="RIGHT" prefHeight="21.0" prefWidth="197.0" text="Nombre de tentative :">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="tfNbTentative" editable="false" prefHeight="25.0" prefWidth="191.0">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
